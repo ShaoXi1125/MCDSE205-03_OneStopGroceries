@@ -45,4 +45,14 @@ public class StoreController {
         storeService.deleteStore(id);
         return "redirect:/stores";
     }
+
+    @GetMapping("/edit/{id}")
+    public String editStore(@PathVariable Long id, Model model) {
+        // 使用 StoreService 根据 ID 获取商店
+        Store store = storeService.getStoreById(id)
+                .orElseThrow(() -> new RuntimeException("未找到 ID 为 " + id + " 的商店"));
+        model.addAttribute("store", store);
+        model.addAttribute("stores", storeService.getAllStores()); // 可选：显示所有商店
+        return "manageStores"; // 返回 manageStores.jsp 进行编辑
+    }
 }
