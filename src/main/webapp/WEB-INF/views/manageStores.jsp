@@ -3,6 +3,13 @@
 <head>
     <title>Manage Stores</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        function confirmDelete(storeId) {
+            if (confirm("Are you sure you want to delete this store?")) {
+                window.location.href = "/stores/delete/" + storeId;
+            }
+        }
+    </script>
 </head>
 <body class="container mt-4">
     <h1 class="text-center mb-4">Manage Stores</h1>
@@ -53,7 +60,7 @@
                     <td>${store.localities}</td>
                     <td>
                         <a href="/stores/edit/${store.id}" class="btn btn-warning btn-sm">Edit</a>
-                        <a href="/stores/delete/${store.id}" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="javascript:void(0)" onclick="confirmDelete('${store.id}')" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

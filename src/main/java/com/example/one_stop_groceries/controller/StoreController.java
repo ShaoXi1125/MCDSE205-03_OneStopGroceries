@@ -1,4 +1,4 @@
-// src/main/java/com/example/one-stop-groceries/controller/StoreController.java
+
 package com.example.one_stop_groceries.controller;
 
 import com.example.one_stop_groceries.entity.Store;

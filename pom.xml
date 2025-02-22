@@ -46,14 +46,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 添加 JSTL 依赖（Jakarta EE 版本） -->
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
             <version>3.0.0</version>
         </dependency>
 
-        <!-- 添加 JSTL 运行时实现 -->
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
